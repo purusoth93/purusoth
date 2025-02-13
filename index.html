@@ -6,7 +6,7 @@
         <meta name="description" content="Learning platform for programming courses" />
         <meta name="author" content="Your Name" />
         <title>Learning Platform</title>
-       <!-- <link rel="icon" type="image/png" sizes="32x32" href="android-chrome-192x192.png">-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -15,19 +15,53 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
         <style>
-            /* Custom CSS for bigger and same-sized cards */
-            .card {
-                width: 100%;
-                max-width: 50rem;
-                margin: 0 auto;
-                height: 100%;
+
+                                /* Typing Effect Styles */
+            .typewriter {
+                font-size: 2rem; /* Default font size */
+                font-weight: bold;
+                color: #9cd785;
+                padding-right: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                max-width: 100%;
+                width: 100%; /* Make sure it's responsive */
+                display: inline-block;
+                border-right: 2px solid transparent; /* Set the cursor as transparent initially */
+            }
+            
+
+            /* Responsive Font Size for Mobile Devices */
+            @media (max-width: 768px) {
+                .typewriter {
+                    font-size: 1.5rem; /* Smaller font size on smaller screens */
+                }
             }
 
-            /* Updated course image styling */
-            .course-img {
+
+            .custom-courses-section {
+                padding: 50px 0;
+            }
+            .custom-course-card {
+                max-width: 100%;
+                height: 100%;
+                border: 3px solid rgb(231, 102, 196);
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .custom-course-img {
                 width: 100%;
-                height: auto; /* Ensures the full image is displayed */
-                object-fit: contain; /* Keeps the full image without cropping */
+                height: auto;
+                object-fit: contain;
+            }
+            .custom-card-body {
+                padding: 20px;
+            }
+            @media (max-width: 768px) {
+                .custom-course-card {
+                    margin-bottom: 20px;
+                }
             }
 
             /* Stats Section Styling */
@@ -76,35 +110,43 @@
                 color: #007bff;
             }
 
-            /* Responsive adjustments for small screens */
-            @media (max-width: 767px) {
-                .card {
-                    max-width: 100%;
+            .contact-form {
+                max-width: 1000px;
+                margin: 50px auto;
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                animation: backgroundAnimation 5s infinite alternate;
+            }
+            
+            @keyframes backgroundAnimation {
+                0% {
+                    background: #fff;
                 }
-                .course-img {
-                    height: auto;
+                50% {
+                    background: #f0f0f0;
+                }
+                100% {
+                    background: #e0e0e0;
                 }
             }
-
-            @media (min-width: 768px) {
-                .row {
-                    display: block;
-                }
-            }
+        
         </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="#page-top">Quick Developer Platform</a>
+                <a class="navbar-brand" href="#page-top">Quick Developer</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#courses">Our Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" style="color:#f8f9fa;">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#custom-courses" style="color:#f8f9fa;">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactForm" style="color:#f8f9fa;">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -115,8 +157,12 @@
             <div class="masthead-content">
                 <div class="container px-5">
                     <h1 class="masthead-heading mb-0">Welcome to Quick Developer Platform</h1>
+                    <!-- Place this where you want the typing effect to appear -->
+                    <div class="container1">
+                        <div class="typewriter" id="typewriter-text"></div>
+                    </div>
                     <p class="masthead-subheading mb-0">Master programming with expert-led courses</p>
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#courses">Explore Courses</a>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#custom-courses">Explore Courses</a>
                 </div>
             </div>
         </header>
@@ -127,7 +173,7 @@
                 <h2 class="display-4">About Us</h2>
                 <p class="lead mb-4">We are a passionate team of developers and educators dedicated to helping students and professionals master programming skills in the shortest time possible.</p>
                 <a class="btn btn-primary btn-lg rounded-pill" href="#courses">Start Learning</a>
-            </div>
+           </div>
         </section>
 
         <!-- Statistics Section -->
@@ -155,54 +201,61 @@
             <div class="container px-5">
                 <h2 class="display-4">Your Journey Starts Here!</h2>
                 <p class="lead">Our expert-led courses are designed to give you the skills, confidence, and portfolio you need to stand out in the tech industry.</p>
-                <a class="btn btn-light btn-lg rounded-pill mt-4" href="#courses">Join Now</a>
+                <a class="btn btn-light btn-lg rounded-pill mt-4" href="#contactForm">Join Now</a>
             </div>
         </section>
-
-        <!-- Courses Section -->
-        <section id="courses">
-            <div class="container px-5 mt-5">
-                <h2 class="text-center display-4 mb-4">Our Courses</h2>
-
-                <div class="col-12 mb-4">
-                        <div class="card shadow">
-                            <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/04/raspberry-lanza-editor-codigo-aprender-python-lenguaje-ia-3008158.jpg" alt="python" class="card-img-top course-img">
-                            <div class="card-body">
-                                <h5 class="card-title">Python</h5>
-                                <p class="card-text">Learn Basics of Python With Us!</p>
-                                <p>Free Class Starts At Feb 12(6:30pm to 8pm)</p> 
-                                <a href="https://meet.google.com/dvn-xhfo-xrm" class="btn btn-primary">Join Now</a>
-                            </div>
-                        </div>
-                 </div>
-
-                <div class="row">
-                    <div class="col-12 mb-4">
-                        <div class="card shadow">
-                            <img src="https://ded9.com/wp-content/uploads/2021/05/3654e7e5cd4023d6a65bb172fb178be0.jpg" alt="Fullstack with Django" class="card-img-top course-img">
-                            <div class="card-body">
-                                <h5 class="card-title">Django Framework (python)</h5>
-                                <p class="card-text">Learn how to build Django applications using Python and Django.</p>
-                                <a href="https://forms.gle/5B3V9wibDCCJiUpFA" class="btn btn-primary">Enroll Now</a>
-                            </div>
+        <section id="custom-courses" class="custom-courses-section">
+        <div class="container px-5">
+            <h2 class="text-center display-4 mb-4">Our Courses</h2>
+            <div class="row">
+                <div class="col-md-6 col-12 mb-4">
+                    <div class="custom-course-card shadow">
+                        <img src="https://th.bing.com/th/id/OIP.ZjJwpEXpj4Q9I-b5HjmytwHaEK?rs=1&pid=ImgDetMain" alt="Python Intermediate" class="custom-course-img">
+                        <div class="custom-card-body">
+                            <h5 class="custom-card-title">Python Intermediate</h5>
+                            <p class="custom-card-text">Learn how to write code using Python.</p>
+                            <a href="" class="btn btn-primary">Details</a>
                         </div>
                     </div>
-
-                    <div class="col-12 mb-4">
-                        <div class="card shadow">
-                            <img src="https://th.bing.com/th/id/OIP.beuovNRqw9fOAzFL1y_mxQHaEK?rs=1&pid=ImgDetMain" alt="Fullstack with Flask" class="card-img-top course-img">
-                            <div class="card-body">
-                                <h5 class="card-title">Flask Framework(Python)</h5>
-                                <p class="card-text">Master web development using Python and Flask.</p>
-                                <a href="https://forms.gle/j6ouWKPv76q29bFD8" class="btn btn-primary">Enroll Now</a>
-                            </div>
+                </div>
+                <div class="col-md-6 col-12 mb-4">
+                    <div class="custom-course-card shadow">
+                        <img src="https://th.bing.com/th/id/OIP.beuovNRqw9fOAzFL1y_mxQHaEK?rs=1&pid=ImgDetMain" alt="HTML and CSS" class="custom-course-img">
+                        <div class="custom-card-body">
+                            <h5 class="custom-card-title">HTML and CSS</h5>
+                            <p class="custom-card-text">Master web pages using HTML and CSS.</p>
+                            <a href="" class="btn btn-primary">Details</a>
                         </div>
                     </div>
-
-                    
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+        
+        
+ 
+        <!--form-->
+
+        <form id="contactForm" class="contact-form">
+            <h2 class="display-4 text-center" id="contact">Contact Us</h2>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+        <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+            Thank you! Your message has been sent.
+        </div>
 
          <!-- Footer Section -->
          <footer>
@@ -211,12 +264,51 @@
                 <div class="footer-links">
                     <a href="#about">📖 About Us</a>
                     <a href="#courses">📚 Courses</a>
-                    <p>📧 likithaswin14@gmail.com</p>
-                    <p>📞 +91 701 090 9865</p>
+                    <p>Created by Likith Aswin</p>
                 </div>
             </div>
         </footer>
+       
+
+        <!--script for typewriter-->
+
+        <script>
+                        // Typing effect script
+            const text = "Don't memorize coding";
+            let index = 0;
+
+            function typeWriter() {
+                if (index < text.length) {
+                    document.getElementById("typewriter-text").innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 100); // Adjust typing speed
+                }
+                else {
+                    // Add the sad emoji after the text finishes typing
+                    document.getElementById("typewriter-text").innerHTML += "😔";
+                }
+            }
+
+            window.onload = typeWriter; // Starts typing effect when page loads
+
+
+        </script>
+        <!--script for form-->
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                document.getElementById("successMessage").classList.remove("d-none");
+                setTimeout(() => {
+                    document.getElementById("successMessage").classList.add("d-none");
+                    document.getElementById("contactForm").reset();
+                }, 3000);
+            });
+        </script>
+
+
+        
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
+
