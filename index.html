@@ -45,10 +45,13 @@
             .custom-course-card {
                 max-width: 100%;
                 height: 100%;
-                border: 3px solid rgb(231, 102, 196);
                 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                 border-radius: 10px;
                 overflow: hidden;
+            }
+
+            .custom-course-card:hover{
+                border:3px solid rgb(231, 48, 218);
             }
             .custom-course-img {
                 width: 100%;
@@ -131,7 +134,56 @@
                     background: #e0e0e0;
                 }
             }
-        
+
+                        /* Ensuring no conflict with other page styles */
+            .courses-section {
+                background: #fff;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .course-item {
+                font-size: 18px;
+                margin-bottom: 15px;
+                list-style-type: none; /* Remove bullets */
+            }
+
+            .course-item i {
+                color: #28a745;
+                margin-right: 10px;
+            }
+
+            .highlight {
+                color: #007bff;
+                font-weight: bold;
+            }
+
+            /* Mission and Vision styling */
+            .mission, .vision {
+                font-size: 20px;
+                font-weight: bold;
+                color: #343a40;
+            }
+
+            /* Add specific margins for clear section distinction */
+            .courses-section h2 {
+                margin-bottom: 30px;
+            }
+
+            .courses-section h3 {
+                margin-top: 30px;
+            }
+
+            /* Ensuring buttons and content inside the section remain distinct */
+            .btn-primary {
+                padding: 12px 30px;
+            }
+
+            .text-center {
+                margin-top: 20px;
+            }
+            
         </style>
     </head>
     <body id="page-top">
@@ -195,7 +247,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Motivating Content -->
         <section class="py-5 bg-primary text-white text-center">
             <div class="container px-5">
@@ -204,6 +256,42 @@
                 <a class="btn btn-light btn-lg rounded-pill mt-4" href="#contactForm">Join Now</a>
             </div>
         </section>
+
+
+        <div class="container mt-5">
+            <div class="courses-section">
+                <h2 class="text-center mb-4">🎯 Why Choose Our Courses?</h2>
+                <ul class="list-unstyled">
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Beginner to Expert – Our courses are designed to help you grow at your own pace, from beginner to advanced level. No prior experience required!</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Learn by Doing – Apply your knowledge through hands-on projects that reflect real-world challenges.</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Industry-Relevant Skills – Learn the latest technologies and tools used by professionals in the field.</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Experienced Instructors – Our expert instructors are dedicated to your success and are here to support you every step of the way.</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Flexible Learning – Study at your own pace and access course materials anytime, anywhere. Perfect for busy schedules.</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Recognized Certification – Receive a certificate upon course completion that adds value to your resume and career prospects.</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Lifetime Access – Enjoy lifetime access to course materials, so you can always refresh your knowledge whenever you need.</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Affordable and Accessible – Get quality education at a fraction of the cost of traditional programs, making it accessible to everyone.</li>
+                    <li class="course-item"><i class="fas fa-check-circle"></i> Supportive Community – Join a community of like-minded learners, network with peers, and get support from instructors and fellow students.</li>
+                </ul>
+        
+                <div class="mt-5">
+                    <h3 class="text-center mission">🚀 Our Mission</h3>
+                    <p class="text-center">Our mission is to provide accessible, high-quality education that empowers individuals to reach their full potential and succeed in the ever-evolving tech world.</p>
+                </div>
+        
+                <div class="mt-4">
+                    <h3 class="text-center vision">🌍 Our Vision</h3>
+                    <p class="text-center">We envision a future where every individual has the opportunity to learn, grow, and thrive in the technology field, regardless of background or location.</p>
+                </div>
+        
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-primary btn-lg">Enroll Now and Start Your Journey!</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <section id="custom-courses" class="custom-courses-section">
         <div class="container px-5">
             <h2 class="text-center display-4 mb-4">Our Courses</h2>
@@ -214,7 +302,7 @@
                         <div class="custom-card-body">
                             <h5 class="custom-card-title">Python Intermediate</h5>
                             <p class="custom-card-text">Learn how to write code using Python.</p>
-                            <a href="" class="btn btn-primary">Details</a>
+                            <a href="python.html" class="btn btn-primary">Details</a>
                         </div>
                     </div>
                 </div>
