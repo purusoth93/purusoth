@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLS&CSS Course Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        .header {
+            background: #e047c9;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: #e047c9;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .topic {
+            background: #e047c9;
+            color: white;
+            padding: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: left;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+            word-wrap: break-word;
+        }
+        .topic:hover {
+            background: #e872e6;
+        }
+        .topic-content {
+            display: none;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 16px;
+            word-wrap: break-word;
+            text-align: left;
+        }
+        .topic-content ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+        .topic-content ul li {
+            background: #cfc0d2;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            list-style: none;
+        }
+
+    
+        .benefits-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .benefit-item {
+            font-size: 18px;
+            margin-bottom: 15px;
+            list-style-type: none; /* Remove bullets */
+        }
+        .benefit-item i {
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .rating {
+            font-size: 22px;
+            color: #f39c12;
+        }
+         /* Footer Styling */
+         footer {
+            background: #060708;
+            color: rgb(22, 12, 12);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+
+        @media (max-width: 600px) {
+            .header {
+                font-size: 20px;
+                padding: 15px;
+            }
+            .topic {
+                font-size: 16px;
+                padding: 12px;
+            }
+            .topic-content {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-button" onclick="history.back();">&#8592; Back</a>
+        HTML&CSS Course
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Course Content</h1>
+            <p>This course will take you through the fundamentals of HTML, covering essential concepts and practical applications.</p>
+
+            <div class="topic" onclick="toggleContent('starter')">Introduction to Web Development <span>+</span></div>
+            <div id="starter" class="topic-content">
+                <ul>
+                    <li>What is a website</li>
+                    <li>Difference between Frontend and Backend</li>
+                    <li>Overview of HTML, CSS, and JavaScript</li>
+                    <li>Tools needed</li>
+                </ul>
+            </div>
+            
+            <div class="topic" onclick="toggleContent('controlStatements')">HTML Basics <span>+</span></div>
+            <div id="controlStatements" class="topic-content">
+                <ul>
+                    <li>What is HTML?</li>
+                    <li>Structure of an HTML document</li>
+                    <li>HTML Elements & Tags</li>
+                    <li>Writing the first webpage (Basic structure)</li>
+                </ul>
+            </div>
+
+            <div class="topic" onclick="toggleContent('LoopingStatement')">HTML Forms & Tables <span>+</span></div>
+            <div id="LoopingStatement" class="topic-content">
+                <ul>
+                    <li>HTML Forms</li>
+                    <li>HTML Tables</li>
+                </ul>
+            </div>
+            <div class="topic" onclick="toggleContent('datastructure')">Introduction to CSS<span>+</span></div>
+            <div id="datastructure" class="topic-content">
+                <ul>
+                    <li>What is CSS?</li>
+                    <li>CSS Selectors & Properties</li>
+                    <li>CSS Colors & Backgrounds</li>
+                    <li>CSS Box Model & LayoutDictionary</li>
+                </ul>
+            </div>
+
+            <div class="topic" onclick="toggleContent('functions')">CSS Styling & Layouts <span>+</span></div>
+            <div id="functions" class="topic-content">
+                <ul>
+                    <li>Typography & Text Styling</li>
+                    <li>CSS Layouts & Positioning</li>
+                </ul>
+            </div>
+            
+            <div class="topic" onclick="toggleContent('oop')">Responsive Web Design <span>+</span></div>
+            <div id="oop" class="topic-content">
+                <ul>
+                    <li>Introduction to Mobile-Friendly Design</li>
+                    <li>What are Media Queries?</li>
+                    <li>Making images and text responsive</li>
+                    <li>Viewport meta tag</li>
+                    <li>Grid and Flexbox Layouts</li>
+                </ul>
+            </div>
+            
+            <div class="topic" onclick="toggleContent('fileHandling')">Mini Project - My portfolio <span>+</span></div>
+            <div id="fileHandling" class="topic-content">
+                <ul>
+                    <li>Create a homepage</li>
+                    <li>Add a profile image and a bio section</li>
+                    <li>Include links to social media / contact details</li>
+                    <li>simple form (Contact Form)</li>
+                    <li>Style the page using CSS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="benefits-section">
+            <h2 class="text-center mb-4">🚀 Benefits of Enrolling in Our Course</h2>
+            <ul class="list-unstyled">
+                <li class="benefit-item"><i class="fas fa-check-circle"></i> Beginner-Friendly Approach – Learn from scratch with step-by-step guidance.</li>
+                <li class="benefit-item"><i class="fas fa-check-circle"></i> Hands-on Learning – Work on real-world projects and assignments.</li>
+                <li class="benefit-item"><i class="fas fa-check-circle"></i> Industry-Relevant Skills – Understand HTML,CSS and development concepts.</li>
+                <li class="benefit-item"><i class="fas fa-check-circle"></i> Expert-Led Sessions – Learn from experienced instructors.</li>
+                <li class="benefit-item"><i class="fas fa-check-circle"></i> Live Doubt-Solving – Get instant answers to your queries.</li>
+                <li class="benefit-item"><i class="fas fa-check-circle"></i> Career Guidance & Support – Get insights on job and freelancing opportunities.</li>
+                <li class="benefit-item"><i class="fas fa-check-circle"></i> Affordable & High-Quality Learning – Best content at a budget-friendly price.</li>
+            </ul>
+    
+            <div class="text-center mt-4">
+                <h4>⭐ Course Rating ⭐</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span class="ms-2">(4.9/5) Based on student reviews</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 Quick Developer Platform. All Rights Reserved.</p>
+            <div class="footer-links">
+                <p>Created by Likith Aswin</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            let content = document.getElementById(id);
+            let allContent = document.querySelectorAll('.topic-content');
+            let allTopics = document.querySelectorAll('.topic span');
+            
+            allContent.forEach(item => {
+                if (item.id !== id) {
+                    item.style.display = 'none';
+                }
+            });
+            
+            allTopics.forEach(span => {
+                span.innerText = '+';
+            });
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+                document.querySelector(`.topic[onclick*='${id}'] span`).innerText = '-';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
